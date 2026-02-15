@@ -79,7 +79,7 @@ const getPoll = async (req, res, next) => {
         const poll = await Poll.findOne({ pollId: req.params.pollId }).select(
             '-votedIps -__v'
         );
-        console.log(poll);
+        // console.log(poll);
 
         if (!poll) {
             return res.status(404).json({ error: 'Poll not found' });
