@@ -571,16 +571,6 @@ This is a demo project for a technical assignment. However, feedback and suggest
 
 ---
 
-## 📄 License
 
-This project was created as part of a full-stack development assignment. All rights reserved.
-
----
-
-## 📧 Contact
-
-For questions or feedback regarding this project, please feel free to reach out.
-
----
 
 **Built with ❤️ using modern web technologies**
