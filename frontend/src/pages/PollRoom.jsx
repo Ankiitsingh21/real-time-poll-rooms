@@ -175,7 +175,6 @@ export default function PollRoom() {
     );
   }
 
-  // Error
   if (error) {
     return (
       <div className="page-container">
@@ -192,7 +191,6 @@ export default function PollRoom() {
   return (
     <div className="page-container">
       <div className="w-full" style={{ maxWidth: "580px" }}>
-        {/* Top Bar */}
         <div className="flex items-center justify-between mb-5 animate-fade-in-up">
           <Link
             to="/"
@@ -229,12 +227,11 @@ export default function PollRoom() {
           </div>
         </div>
 
-        {/* Poll Card */}
         <div
           className="glass-card animate-fade-in-up animate-delay-1"
           style={{ padding: "36px" }}
         >
-          {/* Question */}
+      
           <h1
             className="font-bold mb-1.5"
             style={{
@@ -248,7 +245,6 @@ export default function PollRoom() {
             {poll.question}
           </h1>
 
-          {/* Total votes */}
           <p
             className="mb-6"
             style={{ color: "var(--text-muted)", fontSize: "13px" }}
@@ -256,7 +252,6 @@ export default function PollRoom() {
             {poll.totalVotes} {poll.totalVotes === 1 ? "vote" : "votes"} total
           </p>
 
-          {/* Voted indicator */}
           {hasVoted && (
             <div
               className="flex items-center gap-2.5 mb-5 animate-fade-in-scale"
@@ -291,7 +286,6 @@ export default function PollRoom() {
             </div>
           )}
 
-          {/* Options */}
           <div className="flex flex-col gap-2.5">
             {poll.options.map((option, index) => (
               <VoteOption
@@ -308,7 +302,6 @@ export default function PollRoom() {
           </div>
         </div>
 
-        {/* Actions — Copy Link + Create New Poll */}
         <div className="flex items-center justify-center gap-3 mt-5 animate-fade-in-up animate-delay-3">
           <button className="btn-secondary" onClick={copyLink}>
             📋 Copy Link
@@ -323,7 +316,6 @@ export default function PollRoom() {
         </div>
       </div>
 
-      {/* Toast */}
       {toast && (
         <div className={`toast toast-${toast.type}`}>{toast.message}</div>
       )}
